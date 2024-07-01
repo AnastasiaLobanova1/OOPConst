@@ -8,6 +8,13 @@ public class RadioTest {
     Radio radio = new Radio(10);
 
     @Test
+    void shouldSetAmountStation() {
+
+        Assertions.assertEquals(9, radio.getAmountStation());
+    }
+
+
+    @Test
     void shouldSetToOverUpperLimitStationByOne() {
 
         radio.setCurrentStation(10);
@@ -15,14 +22,30 @@ public class RadioTest {
     }
 
     @Test
-    void shouldInitFields() {
+    void shouldInitFieldsCurrentStation() {
 
         Assertions.assertEquals(0, radio.getCurrentStation());
+    }
+    @Test
+    void shouldInitFieldsMinStation() {
+
         Assertions.assertEquals(0, radio.getMinStation());
-        Assertions.assertEquals(9, radio.getAmountStation());
+    }
+    @Test
+    void shouldInitFieldsMaxStation() {
+
         Assertions.assertEquals(9, radio.getMaxStation());
+    }
+    @Test
+    void shouldInitFieldsMaxVolume() {
         Assertions.assertEquals(100, radio.getMaxVolume());
+    }
+    @Test
+    void shouldInitFieldsMinVolume() {
         Assertions.assertEquals(0, radio.getMinVolume());
+    }
+    @Test
+    void shouldInitFieldsCurrentVolume() {
         Assertions.assertEquals(0, radio.getCurrentVolume());
     }
 

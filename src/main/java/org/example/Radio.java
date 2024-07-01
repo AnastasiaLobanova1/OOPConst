@@ -57,7 +57,7 @@ public class Radio {
 
         int target = currentStation + 1;
         if (target > maxStation) {
-            currentStation = 0;
+            currentStation = minStation;
         } else {
             currentStation = target;
         }
